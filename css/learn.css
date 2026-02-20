@@ -1,0 +1,61 @@
+* {
+    margin: 0; /* все отступы во всем документе*/
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+.all_layers{
+    position: relative;
+    /*position: absolute;*/
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /*text-align: center;*/
+    height: 100vh;
+    overflow: hidden;
+}
+
+.text-title{
+    position: absolute;
+    margin-top: -10vh;
+    /*margin-right: 5rem;*/
+    color: white;
+    z-index: 6;
+    text-shadow: 0 0 20px white;
+
+}
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; /* Добавляем дополнительную высоту для эффекта движения */
+    background: url('../img/layer-base.png') center/cover;
+    z-index: 2;
+}
+.parallax-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    /*clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); !* Обрезаем изображение *!*/
+}
+
+.clipped-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    z-index: 5;
+}
